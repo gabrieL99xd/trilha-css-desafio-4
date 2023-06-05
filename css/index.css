@@ -1,0 +1,140 @@
+header{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 40px 20px;
+    gap: 30px;
+    background-image: url('../assets/HeaderBackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -470px;
+}
+
+header h1{
+    width: 60%;
+    text-transform: uppercase;
+}
+
+header p {
+    text-align: justify;
+}
+
+.header-btns{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header-btns button{
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.header-btns :nth-child(1){
+    background-color: white;
+}
+
+.header-btns :nth-child(2){
+    background-color: #23272A;
+    color: white;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+main > :nth-child(even) {
+    background-color: #f6f6f6;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container{
+    padding: 20px;
+}
+
+.descricao{
+    text-align: justify;
+}
+
+.descricao h1 , .descricao p{
+    margin: 20px 0;
+}
+
+footer{
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: #23272A;
+    color: white;
+}
+
+footer h2{
+    margin: 0 0 0 15px;
+}
+
+@media screen and (min-width: 578px) {
+    header {
+        background-position: -200px;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    header {
+        background-size: cover;
+        background-position: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header h1{
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    header p{
+        text-align: justify;
+        width: 60%;
+    }
+
+    .header-btns{
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 920px) {
+    .container{
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: row;
+        font-size: 1.25rem;
+    }
+
+    .descricao{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    main > :nth-child(2) {
+        flex-direction: row-reverse;
+    }
+
+    main > :nth-child(4) {
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
+
+    main > :nth-child(4) .descricao{
+        text-align: center;
+        width: 80%;
+     }
+
+}
